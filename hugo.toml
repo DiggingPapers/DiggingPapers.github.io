@@ -1,4 +1,4 @@
-baseURL = 'https://LilPapers.github.io/'
+baseURL = 'https://lilPapers.github.io/'
 languageCode = 'ko-kr'
 title = 'LilPapers'
 theme = 'PaperMod'
