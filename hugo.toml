@@ -7,4 +7,29 @@ theme = 'PaperMod'
     env = 'production'
     title = 'LilPapers main'
     description = '...'
-    # PaperMod 전용 설정들을 여기에 추가할 수 있습니다.
+    
+    [params.label]
+        text = "LilPapers"
+        icon = "/images/logo.png"
+        iconHeight = 35
+
+    [params.assets]
+        favicon = "/favicon.ico"
+        # favicon16x16 = "/favicon-16x16.png"
+        # favicon32x32 = "/favicon-32x32.png"
+        apple_touch_icon = "/apple-touch-icon.png"
+    
+    [params.profileMode]
+        enabled = true # true로 설정하면 프로필 모드 활성화
+        title = "LilPapers"
+        subtitle = "Hello worlds"
+        displayFullDisp = true
+        imageUrl = "/images/profile.png" # 프로필 이미지 경로
+        imageWidth = 120
+        imageHeight = 120
+        # [[params.profileMode.buttons]]
+        #     name = "Posts"
+        #     url = "posts"
+        # [[params.profileMode.buttons]]
+        #     name = "Tags"
+        #     url = "tags"
