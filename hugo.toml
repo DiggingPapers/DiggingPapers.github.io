@@ -1,15 +1,15 @@
-baseURL = 'https://lilPapers.github.io/'
+baseURL = 'https://diggingpapers.github.io/'
 languageCode = 'ko-kr'
-title = 'LilPapers'
+title = 'DiggingPapers'
 theme = 'PaperMod'
 
 [params]
     env = 'production'
-    title = 'LilPapers main'
+    title = 'DiggingPapers main'
     description = '...'
     
     [params.label]
-        text = "LilPapers"
+        text = "DiggingPapers"
         icon = "/images/logo.png"
         iconHeight = 35
 
@@ -21,7 +21,7 @@ theme = 'PaperMod'
     
     [params.profileMode]
         enabled = true # true로 설정하면 프로필 모드 활성화
-        title = "LilPapers"
+        title = "DiggingPapers"
         subtitle = "Hello worlds"
         displayFullDisp = true
         imageUrl = "/images/profile.png" # 프로필 이미지 경로
