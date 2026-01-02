@@ -3,10 +3,60 @@ languageCode = 'ko-kr'
 title = 'DiggingPapers'
 theme = 'PaperMod'
 
+enableInlineShortcodes = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+enableEmoji = true
+pygmentsUseClasses = true
+mainsections = ["posts", "papermod"]
+
+[minify]
+  disableXML = true
+
+[pagination]
+  disableAliases = false
+  pagerSize = 5
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    [languages.en.taxonomies]
+      category = "categories"
+      tag = "tags"
+      series = "series"
+    [[languages.en.menu.main]]
+      name = "Archive"
+      url = "archives"
+      weight = 5
+    [[languages.en.menu.main]]
+      name = "Search"
+      url = "search/"
+      weight = 10
+    [[languages.en.menu.main]]
+      name = "Tags"
+      url = "tags/"
+      weight = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
     env = 'production'
     title = 'DiggingPapers main'
-    description = '...'
+    description = 'DiggingPapers main parameter'
+    ShowShareButtons = true
+    ShowReadingTime = true
+    displayFullLangName = true
+    ShowPostNavLinks = true
+    ShowBreadCrumbs = true
+    ShowCodeCopyButtons = true
+    ShowRssButtonInSectionTermList = true
+    ShowAllPagesInArchive = true
+    ShowPageNums = true
+    ShowToc = true
     
     [params.label]
         text = "DiggingPapers"
@@ -20,9 +70,9 @@ theme = 'PaperMod'
         apple_touch_icon = "/apple-touch-icon.png"
     
     [params.profileMode]
-        enabled = true # true로 설정하면 프로필 모드 활성화
+        enabled = false # true로 설정하면 프로필 모드 활성화
         title = "DiggingPapers"
-        subtitle = "Hello worlds"
+        subtitle = ""
         displayFullDisp = true
         imageUrl = "/images/profile.png" # 프로필 이미지 경로
         imageWidth = 120
@@ -33,3 +83,30 @@ theme = 'PaperMod'
         # [[params.profileMode.buttons]]
         #     name = "Tags"
         #     url = "tags"
+
+    [params.homeInfoParams]
+        Title = "DiggingPapers"
+        Content = """
+👋 Welcome to DiggingPapers!
+
+        """
+
+[params.editPost]
+    URL = "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+    Text = "Suggest Changes"
+    appendFilePath = true
+
+[params.assets]
+    disableHLJS = true
+
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = true
+    [markup.highlight]
+        noClasses = false
+
+[services]
+    [services.instagram]
+        disableInlineCSS = true
+    [services.x]
+        disableInlineCSS = true
