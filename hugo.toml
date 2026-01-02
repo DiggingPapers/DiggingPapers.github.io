@@ -61,6 +61,7 @@ mainsections = ["posts", "papermod"]
     ShowAllPagesInArchive = true
     ShowPageNums = true
     ShowToc = true
+    math = true
     
     [params.label]
         text = "DiggingPapers"

@@ -36,7 +36,7 @@ $H$는 분포의 entropy를 의미
 
 ## 𝌰 Collapse Masked Autoencoder (CoMAE)
 
-{{< figure src="images/comae/2.png" attr="" align=center link="" target="_blank" >}}  
+{{< figure src="/images/comae/2.png" attr="" align=center target="_blank" >}}  
 
 
 CoMAE: 특정 patch를 복원하기 위해 다른 patch들 중 어떤 것이 가장 필요한지 학습
