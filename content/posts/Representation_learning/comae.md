@@ -19,7 +19,7 @@ weight: 1
 따라서 이미지를 구성하는 최적의 순서를 찾아내서 이미지 생성과 분류의 성능을 높이는 방법을 제안  
 
 - Code: https://github.com/wguo-ai/CoP
-- Paper: [The Collapse of Patches](2511.22281v1.pdf)
+- Paper: [The Collapse of Patches](https://arxiv.org/abs/2511.22281)
 - Paper from ```Arxiv_2025```
 
 ---
