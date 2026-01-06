@@ -92,6 +92,15 @@ mainsections = ["posts", "papermod"]
     [params.homeInfoParams]
         Title = "DiggingPapers"
         Content = """
+
+    [params.math]
+    enable = true
+    delimiters = [
+        {left = "$", right = "$", display = false},
+        {left = "$$", right = "$$", display = true}
+
+    ]
+
 👋 Welcome to DiggingPapers!
 
         """

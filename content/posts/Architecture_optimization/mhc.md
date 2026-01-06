@@ -1,5 +1,5 @@
 ---
-title: "$m$HC: Manifold-Constrained Hyper-Connections"
+title: "$m$ HC: Manifold-Constrained Hyper-Connections"
 summary: .
 date: 2026-01-06
 aliases: ["/mHC"]
@@ -63,7 +63,8 @@ $$
 
 $$
 x_L=\bigg( \prod^{L-1}_{i=1}\mathcal{H}^{\text{res}}_{L-i} \bigg)x_l + \sum^{L-1}_{i=l} \bigg( \prod^{L-1-i}_{j=1}\mathcal{H}^{\text{res}}_{L-j} \bigg)\mathcal{H}^{\text{post}}_{i}\mathcal{F}(\mathcal{H}^{\text{pre}}_{i}x_i, W_i)
-$$
+$$  
+
 $\mathcal{H}^{\text{res}}$는 결국 앞서 말한것처럼 recursive 되며 값이 폭발하거나 없어지는 현상 발생
 
 ---
