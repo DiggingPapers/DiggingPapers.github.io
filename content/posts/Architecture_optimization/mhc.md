@@ -42,12 +42,15 @@ Residual Connection은 단순 합 연산 (Vanishing Gradient 방지)
 
 수식으로 표현하면 다음과 같다 (복수의 feature가 아닌 단일 feature 상황):
 
+<div>
 $$
 x_{l+1}=\mathcal{H}_l^{\text{res}}x_l+\mathcal{H}^{\text{post}}_l\mathcal{F}(H^{\text{pre}}x_l,W_l)
 $$
+</div>
 
 각 변수는 다음과 같이 정의할 수 있다:
 
+<div>
 $$
 \begin{cases} 
 \tilde{x}_l = \text{RMSNorm}(x_l) \\
@@ -55,6 +58,7 @@ $$
 \mathcal{H}_l^{\text{post}} = \alpha_l^{\text{post}} \cdot \tanh(\theta_l^{\text{post}} \tilde{x}_l^{\top}) + b_l^{\text{post}} \\
 \mathcal{H}_l^{\text{res}} = \alpha_l^{\text{res}} \cdot \tanh(\theta_l^{\text{res}} \tilde{x}_l^{\top}) + b_l^{\text{res}} \end{cases}
 $$
+</div>
 
 - $\alpha$는 값의 크기를 조절하는 learnable gating factor를 의미
 - $\theta$는 projection parameter 
@@ -104,6 +108,7 @@ Doubly stochastic matrix끼리는 서로 곱했을 때 결과가 doubly stochast
 위의 방법의 실제 적용을 위해 사용한 방법을 설명
 먼저 l-th layer 입력 $x_l \in \mathbb{R}^{n\times C}$를 flatten 한 vector $\vec{x}=\text{vec}(x_l)\in\mathbb{R}^{1\times nC}$  에 대한 HC fomulation은 다음과 같이 정리가 가능
 
+<div>
 $$
 \begin{cases}
 \vec{x}_l' = \text{RMSNorm}(\vec{x}_l) \\
@@ -112,9 +117,11 @@ $$
 \tilde{\mathcal{H}}_l^{\text{res}} = \alpha_l^{\text{res}} \cdot \text{mat}(\vec{x}_l' \varphi_l^{\text{res}}) + \mathbf{b}_l^{\text{res}}
 \end{cases}
 $$
+</div>
 
 $\varphi$는 dynamic projection을 위한 linear projection을 나타내며, $\text{mat}(\cdot)$은 flatten된 vector의 공간을 복원하는 매소드. 이때 실제 적용하는 $\mathcal{H}$는 다음과 같이 정의 됨:
 
+<div>
 $$
 \begin{cases}
 \mathcal{H}_l^{\text{pre}}=\sigma(\tilde{\mathcal{H}}_l^{\text{pre}
@@ -124,12 +131,15 @@ $$
 \mathcal{H}_l^{\text{res}}=\text{Sinkhorn-Knopp}(\tilde{\mathcal{H}}_l^{\text{res}})
 \end{cases}
 $$
+</div>
 
 즉 pre, post는 sigmoid로 비음수 제약 / res는 sinkhorn-Knopp 알고리즘을 통해 doubly stochasitc matrix로 변환 함.
 해당 수식은 $M^{(0)}=\exp(\tilde{\mathcal{H}}_l^{res})$ 부터 시작해서, 각 행과 열을 t번 번갈아 가며 normalization을 진행하는 형태
 
+<div>
 $$
 M^{(t)}=\mathcal{T}_r \bigg( \mathcal{T}_c(M^{(t-1)}) \bigg)
 $$
+</div>
 
 이때 $t_{\max} \rightarrow \infty$ 일때 결국 어느 시점에서 수렴하여 행과 열의 합이 1인 doubly stochasitc matrix로 변환되며, 현실적으로 너무 큰 반복은 불가능하므로 $t_{\max}=20$으로 사용하였음
