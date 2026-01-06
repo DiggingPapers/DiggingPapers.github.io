@@ -49,7 +49,11 @@ $$
 각 변수는 다음과 같이 정의할 수 있다:
 
 $$
-\begin{cases} \tilde{x}_l = \text{RMSNorm}(x_l) \\ \mathcal{H}_l^{\text{pre}} = \alpha_l^{\text{pre}} \cdot \tanh(\theta_l^{\text{pre}} \tilde{x}_l^{\top}) + b_l^{\text{pre}} \\ \mathcal{H}_l^{\text{post}} = \alpha_l^{\text{post}} \cdot \tanh(\theta_l^{\text{post}} \tilde{x}_l^{\top}) + b_l^{\text{post}} \\ \mathcal{H}_l^{\text{res}} = \alpha_l^{\text{res}} \cdot \tanh(\theta_l^{\text{res}} \tilde{x}_l^{\top}) + b_l^{\text{res}} \end{cases}
+\begin{cases} 
+\tilde{x}_l = \text{RMSNorm}(x_l) \\
+\mathcal{H}_l^{\text{pre}} = \alpha_l^{\text{pre}} \cdot \tanh(\theta_l^{\text{pre}} \tilde{x}_l^{\top}) + b_l^{\text{pre}} \\
+\mathcal{H}_l^{\text{post}} = \alpha_l^{\text{post}} \cdot \tanh(\theta_l^{\text{post}} \tilde{x}_l^{\top}) + b_l^{\text{post}} \\
+\mathcal{H}_l^{\text{res}} = \alpha_l^{\text{res}} \cdot \tanh(\theta_l^{\text{res}} \tilde{x}_l^{\top}) + b_l^{\text{res}} \end{cases}
 $$
 
 - $\alpha$는 값의 크기를 조절하는 learnable gating factor를 의미
@@ -101,7 +105,12 @@ Doubly stochastic matrix끼리는 서로 곱했을 때 결과가 doubly stochast
 먼저 l-th layer 입력 $x_l \in \mathbb{R}^{n\times C}$를 flatten 한 vector $\vec{x}=\text{vec}(x_l)\in\mathbb{R}^{1\times nC}$  에 대한 HC fomulation은 다음과 같이 정리가 가능
 
 $$
-\begin{cases} \vec{x}_l' = \text{RMSNorm}(\vec{x}_l) \\ \tilde{\mathcal{H}}_l^{\text{pre}} = \alpha_l^{\text{pre}} \cdot (\vec{x}_l' \varphi_l^{\text{pre}}) + \mathbf{b}_l^{\text{pre}} \\ \tilde{\mathcal{H}}_l^{\text{post}} = \alpha_l^{\text{post}} \cdot (\vec{x}_l' \varphi_l^{\text{post}}) + \mathbf{b}_l^{\text{post}} \\ \tilde{\mathcal{H}}_l^{\text{res}} = \alpha_l^{\text{res}} \cdot \text{mat}(\vec{x}_l' \varphi_l^{\text{res}}) + \mathbf{b}_l^{\text{res}}, \end{cases}
+\begin{cases}
+\vec{x}_l' = \text{RMSNorm}(\vec{x}_l) \\
+\tilde{\mathcal{H}}_l^{\text{pre}} = \alpha_l^{\text{pre}} \cdot (\vec{x}_l' \varphi_l^{\text{pre}}) + \mathbf{b}_l^{\text{pre}} \\
+\tilde{\mathcal{H}}_l^{\text{post}} = \alpha_l^{\text{post}} \cdot (\vec{x}_l' \varphi_l^{\text{post}}) + \mathbf{b}_l^{\text{post}} \\
+\tilde{\mathcal{H}}_l^{\text{res}} = \alpha_l^{\text{res}} \cdot \text{mat}(\vec{x}_l' \varphi_l^{\text{res}}) + \mathbf{b}_l^{\text{res}}
+\end{cases}
 $$
 
 $\varphi$는 dynamic projection을 위한 linear projection을 나타내며, $\text{mat}(\cdot)$은 flatten된 vector의 공간을 복원하는 매소드. 이때 실제 적용하는 $\mathcal{H}$는 다음과 같이 정의 됨:
