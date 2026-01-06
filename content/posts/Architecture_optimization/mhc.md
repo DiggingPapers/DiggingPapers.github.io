@@ -1,6 +1,6 @@
 ---
 title: "mHC: Manifold-Constrained Hyper-Connections"
-summary: .
+summary: "기존 hyper connection은 residual connection을 대체하여 좋은 성능을 보이지만, 훈련 불안정성 및 메모리 오버헤드가 크다는 단점을 가짐. 이는 hyper connection이 identity mapping을 손상시키기 때문에 일어나는 현상인데, $m$HC는 identity mapping을 복원하면서도 최적화를 통해 효율성을 보장하는 프레임워크를 제안함."
 date: 2026-01-06
 aliases: ["/mHC"]
 tags: ["Hyper Connection", "Architecture Optimization", "Training Stability"]
