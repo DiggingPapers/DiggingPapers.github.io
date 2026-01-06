@@ -1,11 +1,10 @@
 ---
 title: "$m$HC: Manifold-Constrained Hyper-Connections"
 summary: .
-date: 2026-01-08
+date: 2026-01-06
 aliases: ["/mHC"]
 tags: ["Hyper Connection", "Architecture Optimization", "Training Stability"]
 author: ["Donghyun Han"]
-# draft: true
 cover: 
     image: images/mhc/1.png
     hiddenInList: true
