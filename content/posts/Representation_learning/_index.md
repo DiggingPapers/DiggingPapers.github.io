@@ -1,5 +1,5 @@
 ---
 title: Representation Learning
-summary: Representation learning is a set of techniques that allows a system to automatically discover the representations needed for feature detection or classification from raw data.
-description: Instead of manually designing features, it uses machine learning to transform complex data into a dense vector space (embeddings). This process captures the essential patterns and semantic meanings, making it easier for models to perform downstream tasks like recognition or prediction.
+summary: Representation Learning is the field of machine learning focused on automatically discovering the underlying features and patterns from raw data to improve task performance.
+description: This category explores the methodologies and architectures designed to transform complex, high-dimensional data into meaningful representations. By learning to extract essential information without manual feature engineering, these techniques serve as the critical foundation for modern deep learning, enabling models to generalize across various downstream tasks such as classification, detection, and generation.
 ---
