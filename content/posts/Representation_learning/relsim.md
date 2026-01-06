@@ -34,7 +34,7 @@ LLaVA의 corresponding인 위스콘신의 이용재 교수님의 연구실에서
 
 - 대규모 데이터셋인 LAION-2B에서 관계적 구조나 논리를 포함할 가능성이 높은 흥미로운 이미지 선별
 
-{{< figure src="/images/relism/2.png" attr="" align=center target="_blank" >}} 
+{{< figure src="/images/relsim/2.png" attr="" align=center target="_blank" >}} 
 
 - 이를 위해 VLM(Qwen2.5-VL)을 fine-tuning 하여 이미지가 관계적 패턴을 가지고 있는지 ("Yes/NO") 판별하여 114,000장(114k)의 관계적 이미지 확보
 - VLM은 유의미한 이미지를 classify 할 수 있도록 대략 12,300장 (positive 1,300 / negative 11,000)의 예시를 human-labeled하여 데이터셋을 구축하고 모델을 fine-tuning
