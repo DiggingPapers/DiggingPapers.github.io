@@ -95,7 +95,7 @@ $m$HC는 $\mathcal{H}^{\text{res}}$를 doubly stochastic matrix(이중 확률 �
 Doubly stochastic matrix끼리는 서로 곱했을 때 결과가 doubly stochastic matrix가 된다는 특징이 있음  
 이를 통해 얻을 수 있는 이점은 다음과 같음.
 
-- **Norm Preservation**: <span>$\bigg( \prod^{L-1}_{i=1} \mathcal{H}^{\text{res}}_{L-i} \bigg) x_{l}$</span>은 계속해서 행과 열의 합이 1이 되기 때문에 Spectral Norm이 1로 제한되어 gradient exploding을 방지 할 수 있음  
+- **Norm Preservation**: <span>$\bigg( \prod^{L-1}\_{i=1} \mathcal{H}^{\text{res}}\_{L-i} \bigg) x\_{l}$</span>은 계속해서 행과 열의 합이 1이 되기 때문에 Spectral Norm이 1로 제한되어 gradient exploding을 방지 할 수 있음  
 - **Compositional Closure**: 여러 layer에 걸쳐 확률적으로 유지되는 특징 덕분에 모델의 깊이 측면에서 stability를 유지할 수 있음  
 - **Geometric Interpretation via the Birkhoff Polytope**: <span>$\mathcal{H}^{\text{res}}$</span>의 집합은 convex hull인 Birkhoff polytope를 형성하는데, 기하학적으로 이같은 조합은 반복적으로 적용 시 정보혼합이 단조롭게 증가하는 경향이 있어 feature fusion mechanism에 적합함  
 
