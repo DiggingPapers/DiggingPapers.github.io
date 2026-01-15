@@ -173,7 +173,7 @@ $$
 
 --> $k$차원과 $v$차원에 대한 1-rank 연산을 통해 수정할 부분, 남길부분 등을 결정하고 연산하는 것입니다.
 
-e.g., <span>$k=\begin{bmatrix} 1\\\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\\\3\end{bmatrix}$</span> 일때 $\beta=1$일 경우 ($k$는 단위 벡터)
+e.g., <span>$k=\begin{bmatrix} 1\\\\\\\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\\\\\\\3\end{bmatrix}$</span> 일때 $\beta=1$일 경우 ($k$는 단위 벡터)
 
 <div>
 $$
@@ -203,7 +203,7 @@ v(X)^{\sf T}}_{\text{Write}}
 $$
 </div>
 
-e.g., <span>$k=\begin{bmatrix} 1\\\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\\\3\end{bmatrix}$</span> 일때 $\beta=2$일 경우 ($k$는 단위 벡터)  
+e.g., <span>$k=\begin{bmatrix} 1\\\\\\\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\\\\\\\3\end{bmatrix}$</span> 일때 $\beta=2$일 경우 ($k$는 단위 벡터)  
 
 - Delta operator $A(X)$ 연산  
 
