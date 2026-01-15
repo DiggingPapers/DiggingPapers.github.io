@@ -1,9 +1,9 @@
 ---
 title: "Deep Delta Learning"
-summary: "Deep Delta Learning은 <span>$\beta$</span> gate에 의해 3가지 연산으로 residual connection을 강화했습니다.
-$\beta \rightarrow 0$의 경우 layer를 통과한 값을 무시하고 입력을 출력으로 그대로 보내며 (identity)
-$\beta \rightarrow 1$일 때에는 $k$에 따라 원본 값을 삭제하고, $v$값을 해당 부분에 합하게 됩니다. 이때 $v$는 mlp와 같이 해당 block에서 연산하는 연산계층을 의미합니다.
-$\beta \rightarrow 2$일때에는 $k$에 따라 원본 값을 반사시키고, 해당 위치를 $2v$ 만큼 변화한 값을 더해줍니다.
+summary: "Deep Delta Learning은 $\\beta$ gate에 의해 3가지 연산으로 residual connection을 강화했습니다.
+$\\beta \\rightarrow 0$의 경우 layer를 통과한 값을 무시하고 입력을 출력으로 그대로 보내며 (identity)
+$\\beta \\rightarrow 1$일 때에는 $k$에 따라 원본 값을 삭제하고, $v$값을 해당 부분에 합하게 됩니다. 이때 $v$는 mlp와 같이 해당 block에서 연산하는 연산계층을 의미합니다.
+$\\beta \\rightarrow 2$일때에는 $k$에 따라 원본 값을 반사시키고, 해당 위치를 $2v$ 만큼 변화한 값을 더해줍니다.
 이를 통해 기존 ResBlock에서는 할수 없었던 기하학적 변환을 일반화하고 재정렬하는 능력을 갖출수 있습니다."
 date: 2026-01-15
 aliases: ["/DDL"]
@@ -173,7 +173,7 @@ $$
 
 --> $k$차원과 $v$차원에 대한 1-rank 연산을 통해 수정할 부분, 남길부분 등을 결정하고 연산하는 것입니다.
 
-e.g., <span>$k=\begin{bmatrix} 1\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\3\end{bmatrix}$</span> 일때 $\beta=1$일 경우 ($k$는 단위 벡터)
+e.g., <span>$k=\begin{bmatrix} 1\\\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\\\3\end{bmatrix}$</span> 일때 $\beta=1$일 경우 ($k$는 단위 벡터)
 
 <div>
 $$
@@ -203,7 +203,7 @@ v(X)^{\sf T}}_{\text{Write}}
 $$
 </div>
 
-e.g., <span>$k=\begin{bmatrix} 1\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\3\end{bmatrix}$</span> 일때 $\beta=2$일 경우 ($k$는 단위 벡터)  
+e.g., <span>$k=\begin{bmatrix} 1\\\\0 \end{bmatrix}$</span>, <span>$X=\begin{bmatrix}2\\\\3\end{bmatrix}$</span> 일때 $\beta=2$일 경우 ($k$는 단위 벡터)  
 
 - Delta operator $A(X)$ 연산  
 
